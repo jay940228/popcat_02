@@ -76,8 +76,35 @@
 <body>
 <div class="container">
     <img class="title" src="imgs/popcat.svg" alt="POPCAT">
-    <div class="cat-img" id="p">0227</div>
+    <div class="cat-img" id="p">0</div>
 </div>
+
+<script>
+    // 計數器初始化
+    let count = 0;
+
+    // 用 id 抓取 文字的 HTML 元素
+    let p = document.getElementById('p');
+
+    顯示計數器的數字
+    p.innerText = count;
+
+    // 寫一個function 計數器累加
+    function addCount() {
+        // 計數器累加
+        count += 1;
+    }
+
+    // 註冊滑鼠按下的事件，呼叫計數器累加 function
+    // 註冊滑鼠按下的時候，更新計數器的顯示
+    document.addEventListener('mousedown', function() {
+        addCount();
+        p.innerText = count;
+    });
+
+
+
+</script>
 
 </body>
 </html>
